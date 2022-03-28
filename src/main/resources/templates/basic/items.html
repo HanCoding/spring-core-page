@@ -33,7 +33,7 @@
 
       <tr th:each="item : ${items}">
         <td><a th:text="${item.id}" th:href="@{/basic/items/{itemId}(itemId=${item.id})}" href="item.html">1</a></td>
-        <td><a th:text="${item.itemName}" th:href="@{/basic/items/{itemId}(itemId=${item.id})}" href="item.html">테스트 상품1</a></td>
+        <td><a th:text="${item.itemName}" th:href="@{|/basic/items/${item.id}|}" href="item.html">테스트 상품1</a></td>
         <td th:text="${item.price}">10000</td>
         <td th:text="${item.quantity}">10</td>
       </tr>
